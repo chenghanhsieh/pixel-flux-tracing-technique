@@ -1,8 +1,8 @@
 # Pixel Flux-tracing Technique (PTF)
-Last Updated: Dec 09 2022 by Cheng-Han Hsieh (cheng-han.hsieh@yale.edu) 
+Last Updated: Jan 23 2023 by Cheng-Han Hsieh (cheng-han.hsieh@yale.edu) 
 All rights reserved by Cheng-Han Hsieh @Yale.
 
-This is the main code for the Pixel Flux-tracing Technique developed by Cheng-Han Hsieh et al. 2022.
+This is the main code for the Pixel Flux-tracing Technique developed by Cheng-Han Hsieh et al. 2023. in prep.
 
 #Prerequisite
 Astropy , Numpy, python 2.7
