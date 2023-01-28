@@ -11,13 +11,14 @@ Astropy , Numpy, python 2.7
 This folder contains functions to compute 2D outflow mass, momentum, energy map using the Pixel Flux-tracing Technique developed by Hsieh et al. 2023. in prep.
 
 
-In this folder, I include an example for HH212. The HH212 data is observed by the Atacama Large Millimeter/submillimeter Array (ALMA).
+In this folder, I include an example for HH212. The HH212 CO J = 3-2 data is observed by the Atacama Large Millimeter/submillimeter Array (ALMA).
 
 To run the script, please download the HH212 fits cube: 
 
 https://drive.google.com/file/d/1zwwOQr1Lw03PPmb4pfTQCfMvqPwM8WGt/view?usp=sharing
 
 1. First run the density script to get a H2 column density cube. 
+
 python CO_density.py
 
 The code will generate Den_HH212_CO32.fits. 
@@ -27,3 +28,4 @@ The code will generate Den_HH212_CO32.fits.
 python dEdMdP_maps.py
 
 
+If you use this method for your research, please cite: Hsieh et al. 2023. in prep. 
