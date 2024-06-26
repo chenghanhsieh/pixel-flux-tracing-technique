@@ -21,7 +21,7 @@ from astropy.coordinates import SkyCoord
 from astropy.coordinates import ICRS
 
 def Mass(NH2,image_header,X,d):
-    '''X: abundace ratio between molecule and H2
+    '''X: abundance ratio between molecule and H2
     d: distance to the source in pc'''
     mu = 2.8 #Kauffmann et al. 2008
     mH = 1.674*10**-24 #g mass. of hydrogen
@@ -31,11 +31,11 @@ def Mass(NH2,image_header,X,d):
     #print(image_header)
     Msun = 1.9891*10**33
     #print(mu*mH*pixArea/Msun*(1000/image_header['CDELT3']))
-    return mu*mH*pixArea/Msun*NH2/X*(1000/abs(image_header['CDELT3'])) #Msun /(kms^-1)
+    return mu*mH*pixArea/Msun*NH2/X  #Msun/channel #*(1000/abs(image_header['CDELT3'])) #Msun /(kms^-1)
 
 def generate_spec(image_file_co,d,vsyst,inc,vstart,vend,Name):
     '''image_file_co: CO file path (fits file)
-    d:distance to the source in pc
+    d: distance to the source in pc
     vsyst: system velocity in km/s
     inc: inclination angle in degrees (0 is pole on; 90 is face on)
     Name: save fits name (string)
@@ -104,7 +104,7 @@ def generate_spec(image_file_co,d,vsyst,inc,vstart,vend,Name):
     #Momentum rate dP 
     dP_3dmap = MSpect_final2*vout.reshape(MSpect_final2.shape[0],1,1)
     dv = abs(velo[1]-velo[0])
-    dP_2d = np.nansum(dP_3dmap[:,:,:]*dv,axis=0)
+    dP_2d = np.nansum(dP_3dmap[:,:,:],axis=0)
     dP_2d[dP_2d ==0] = np.nan
 
     OUT = dP_2d[:,:] #'image0219_flux'  #input \n",
@@ -137,7 +137,7 @@ def generate_spec(image_file_co,d,vsyst,inc,vstart,vend,Name):
     #dE Energy rate maps
     Msun = 1.989E30 #kg
     fac = Msun*(10**3)**2*10**7/1e43 # Msun (km/s)^2 to erg
-    dE_3dmap = 1/2*MSpect_final2*vout.reshape(MSpect_final2.shape[0],1,1)**2*dv*fac
+    dE_3dmap = 1/2*MSpect_final2*vout.reshape(MSpect_final2.shape[0],1,1)**2*fac
     dE_2d = np.nansum(dE_3dmap[:,:,:],axis=0)
     dE_2d[dE_2d ==0] = np.nan
     OUT = dE_2d[:,:] #'image0219_flux'  #input \n",
