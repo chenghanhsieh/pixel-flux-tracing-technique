@@ -1,5 +1,5 @@
 # Pixel Flux-tracing Technique (PTF)
-Last Updated: April 20 2023 by Cheng-Han Hsieh (cheng-han.hsieh@yale.edu) 
+Last Updated: April 20 2023 by Cheng-Han Hsieh (chenghan.hsieh@utexas.edu) 
 All rights reserved by Cheng-Han Hsieh @Yale.
 
 This is the main code for the Pixel Flux-tracing Technique developed by Cheng-Han Hsieh et al. 2023. in prep.
