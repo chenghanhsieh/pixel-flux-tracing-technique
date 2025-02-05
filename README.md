@@ -15,7 +15,8 @@ In this folder, I include an example for HH212. The HH212 CO J = 3-2 data is obs
 
 To run the script, please download the HH212 fits cube: 
 
-https://drive.google.com/file/d/1zwwOQr1Lw03PPmb4pfTQCfMvqPwM8WGt/view?usp=sharing
+[https://drive.google.com/file/d/1zwwOQr1Lw03PPmb4pfTQCfMvqPwM8WGt/view?usp=sharing
+](https://drive.google.com/file/d/1ZPmo8jLalSR5k7365lUoLolU3BRbIuSE/view?usp=sharing)
 
 1. First run the density script to get a H2 column density cube. 
 
